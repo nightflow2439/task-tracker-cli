@@ -3,7 +3,8 @@ from datetime import datetime
 
 args = sys.argv[1:]
 
-filename = "tasks.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+filename = os.path.join(BASE_DIR, "tasks.json")
 tasks = []
 
 if os.path.exists(filename):
@@ -94,6 +95,14 @@ elif len(args) == 2 and args[0] == "list":
         print("Invalid input. Correct format: list [todo/in-progress/done/not-done]")
 else:
     print("Invalid input.")
+    print("Correct format:")
+    print("add <task_name>: Add a new task")
+    print("update <task_id> <new_task_name>: Update a task's name")
+    print("delete <task_id>: Delete a task")
+    print("mark-in-progress <task_id>: Mark a task as in progress")
+    print("mark-done <task_id>: Mark a task as done")
+    print("list: List all tasks")
+    print("list <todo|in-progress|done|not-done>: List tasks by status")
 
 with open(filename, "w", encoding="utf-8") as f:
     json.dump(tasks, f, ensure_ascii=False, indent=4) # 能写入中文；缩进4格
