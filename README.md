@@ -8,14 +8,14 @@ A simple command-line task tracker for managing your to-do tasks.
 
 Use Python to run the program with commands:
 
-    python main.py <command> [arguments]
+    `python main.py <command> [arguments]`
 
 ### Method 2: Global Command (Windows)
 
 1. Run `install.bat` to add the program to your user PATH.
 2. In any terminal, use:
 
-    task-cli <command> [arguments]
+    `task-cli <command> [arguments]`
 
 ## Commands
 
