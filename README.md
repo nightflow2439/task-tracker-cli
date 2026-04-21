@@ -12,8 +12,8 @@ Use Python to run the program with commands:
 
 ### Method 2: Global Command (Windows)
 
-1. Add the folder path to your user PATH. 
-(e.g. C:\Users\Administrator\Desktop\workspace\task-tracker-cli)
+1. Add the program folder to your user PATH. 
+(program folder example: C:\Users\Administrator\Desktop\workspace\task-tracker-cli)
 2. In any terminal, use:
 
 `task-cli <command> [arguments]`
