@@ -65,32 +65,32 @@ elif len(args) == 2 and args[0] == "mark-done":
     else:
         print("Invalid input. Correct format: mark-done task_id")
 elif len(args) == 1 and args[0] == "list":
-    print(f"{"id":<5}{"task":<20}{"status":<15}")
+    print(f"{"id":<5}{"task":<50}{"status":<15}")
     # id占5字符左对齐，task占20字符左对齐，status占15字符左对齐
     for task in tasks:
-        print(f"{task["id"]:<5}{task["name"]:<20}{task["status"]:<15}")
+        print(f"{task["id"]:<5}{task["name"]:<50}{task["status"]:<15}")
     # 中文占2格宽度，而:<按字符算，所以task为中文时status对不齐
 elif len(args) == 2 and args[0] == "list":
     if args[1] == "todo":
-        print(f"{"id":<5}{"task":<20}{"status":<15}")
+        print(f"{"id":<5}{"task":<50}{"status":<15}")
         for task in tasks:
             if task["status"] == "todo":
-                print(f"{task["id"]:<5}{task["name"]:<20}{task["status"]:<15}")
+                print(f"{task["id"]:<5}{task["name"]:<50}{task["status"]:<15}")
     elif args[1] == "in-progress":
-        print(f"{"id":<5}{"task":<20}{"status":<15}")
+        print(f"{"id":<5}{"task":<50}{"status":<15}")
         for task in tasks:
             if task["status"] == "in-progress":
-                print(f"{task["id"]:<5}{task["name"]:<20}{task["status"]:<15}")
+                print(f"{task["id"]:<5}{task["name"]:<50}{task["status"]:<15}")
     elif args[1] == "done":
-        print(f"{"id":<5}{"task":<20}{"status":<15}")
+        print(f"{"id":<5}{"task":<50}{"status":<15}")
         for task in tasks:
             if task["status"] == "done":
-                print(f"{task["id"]:<5}{task["name"]:<20}{task["status"]:<15}")
+                print(f"{task["id"]:<5}{task["name"]:<50}{task["status"]:<15}")
     elif args[1] == "not-done":
-        print(f"{"id":<5}{"task":<20}{"status":<15}")
+        print(f"{"id":<5}{"task":<50}{"status":<15}")
         for task in tasks:
             if task["status"] != "done":
-                print(f"{task["id"]:<5}{task["name"]:<20}{task["status"]:<15}")
+                print(f"{task["id"]:<5}{task["name"]:<50}{task["status"]:<15}")
     else:
         print("Invalid input. Correct format: list [todo/in-progress/done/not-done]")
 else:
